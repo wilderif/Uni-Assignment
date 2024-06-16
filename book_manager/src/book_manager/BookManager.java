@@ -45,7 +45,7 @@ public class BookManager {
      * @param id - 검색할 책의 ID
      * @return 검색 성공한 경우 - 검색된 책 객체 / null - 책을 찾지 못한 경우
      */
-    /*public Book searchBook(String id) {
+    public Book searchBook(String id) {
         boolean found = false;
         System.out.println("검색 결과: ");
         for (Book tmpBook : books) {
@@ -59,7 +59,8 @@ public class BookManager {
             System.out.println("검색된 도서가 없습니다.");
         }
         return null;
-    }*/
+    }
+    
     
     
     
@@ -68,7 +69,7 @@ public class BookManager {
      * @param id - 탐색할 책의 ID
      * @return - 책 탐색 성공 여부, TRUE - 탐색 성공 
      */
-    public Book search_bs(String id) {
+    public Book searchBookBS(String id) {
     	boolean found = false;
         System.out.println("검색 결과: ");
         

@@ -24,10 +24,17 @@ class BookManagerTest {
         System.out.println("testAddBook passed");
     }
 
+    
     @Test
     void testSearchBook() {
-        assertNotNull(bookManager.search_bs("1"));
-        assertNull(bookManager.search_bs("5"));
+        assertNotNull(bookManager.searchBook("1"));
+        assertNull(bookManager.searchBook("5"));
+        System.out.println("testSearchBook passed");
+    }
+    
+    void testSearch_bs() {
+        assertNotNull(bookManager.searchBookBS("1"));
+        assertNull(bookManager.searchBookBS("5"));
         System.out.println("testSearchBook passed");
     }
 
