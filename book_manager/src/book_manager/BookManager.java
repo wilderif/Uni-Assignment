@@ -1,6 +1,7 @@
 package book_manager;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -32,6 +33,7 @@ public class BookManager {
             }
         }
         books.add(book);
+        Collections.sort(books); //이진 탐색을 위한 정렬
         System.out.println(book + "도서가 추가되었습니다.");
         return true;
     }
@@ -55,6 +57,43 @@ public class BookManager {
         }
         if (!found) {
             System.out.println("검색된 도서가 없습니다.");
+        }
+        return null;
+    }
+    
+    
+    
+    
+    /**
+     * 주어진 ID를 기준으로 한 이진탐색
+     * @param id - 탐색할 책의 ID
+     * @return - 검색 성공한 경우 - 검색된 책 객체 / null - 책을 찾지 못한 경우
+     */
+    public Book search_bs(String id) {
+    	boolean found = false;
+        System.out.println("검색 결과: ");
+        
+        int left = 0;
+        int right = books.size() - 1;
+
+        while (left <= right) {
+            int mid = (left + right) / 2;
+            Book midBook = books.get(mid);
+            int cmp = midBook.getId().compareTo(id);
+
+            if (cmp < 0) {
+                left = mid + 1;
+            } else if (cmp > 0) {
+                right = mid - 1;
+            } else {
+            	System.out.println(cmp);
+            	found = true;
+                return midBook;
+            }
+        }
+
+        if (!found) { // Book not found
+        	System.out.println("검색된 도서가 없습니다.");
         }
         return null;
     }
