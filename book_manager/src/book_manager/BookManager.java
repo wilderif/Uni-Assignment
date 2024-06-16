@@ -67,9 +67,9 @@ public class BookManager {
     /**
      * 주어진 ID를 기준으로 한 이진탐색
      * @param id - 탐색할 책의 ID
-     * @return - 책 탐색 성공 여부, TRUE - 탐색 성공 
+     * @return - 검색 성공한 경우 - 검색된 책 객체 / null - 책을 찾지 못한 경우
      */
-    public Book searchBookBS(String id) {
+    public Book search_bs(String id) {
     	boolean found = false;
         System.out.println("검색 결과: ");
         

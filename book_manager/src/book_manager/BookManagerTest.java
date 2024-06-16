@@ -32,10 +32,11 @@ class BookManagerTest {
         System.out.println("testSearchBook passed");
     }
     
+    @Test
     void testSearch_bs() {
-        assertNotNull(bookManager.searchBookBS("1"));
-        assertNull(bookManager.searchBookBS("5"));
-        System.out.println("testSearchBook passed");
+        assertNotNull(bookManager.search_bs("1"));
+        assertNull(bookManager.search_bs("5"));
+        System.out.println("testSearch_bs passed");
     }
 
     @Test
