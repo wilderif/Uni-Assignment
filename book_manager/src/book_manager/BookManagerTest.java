@@ -16,6 +16,7 @@ class BookManagerTest {
     }
 
     @Test
+    
     void testAddBook() {
         Book newBook = new Book("4", "알고리즘", "Alice", 2023);
         assertTrue(bookManager.addBook(newBook));
