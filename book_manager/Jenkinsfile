@@ -20,7 +20,7 @@ pipeline {
         
         stage('Test') {
             steps {
-                sh 'java -cp $CLASSPATH org.junit.platform.console.ConsoleLauncher --scan-CLASSPATH > test_results.txt'
+                sh 'java -cp $CLASSPATH org.junit.platform.console.ConsoleLauncher --scan-classpath > test_results.txt'
             }
         }
     }
