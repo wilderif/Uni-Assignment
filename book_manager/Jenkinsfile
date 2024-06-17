@@ -2,7 +2,7 @@ pipeline {
     agent any
     
     environment {
-        CLASSPATH = "classes:/eclipse/plugins/junit-platform-console-standalone-1.7.1.jar"
+        CLASSPATH = "${env.HOME}/eclipse/plugins/junit-platform-console-standalone-1.7.1.jar"
     }
     
     stages {
